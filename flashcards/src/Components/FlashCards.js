@@ -9,19 +9,27 @@ class FlashCards extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-           
+           collection: [],
+           currentStack: [],
+           currentCard: 0
         }
+        //this.getData = this.getData.bind(this);
+        console.log(this.state.collection);
     }
 
     componentDidMount(){
-        console.log("did mount");
+        
         this.getData();
+        console.log("collection return", this.state.collection );
+        
     }
 
     getData(){
         axios.get('http://localhost:3000/Collections')
-        .then(function (response) {
-            console.log(response.data);
+        .then((response) =>  {
+            //console.log(response.data);
+            this.setState({collection: response.data});
+            
         })
     }
 
@@ -53,4 +61,6 @@ class FlashCards extends React.Component {
 
 
 }
+
+
 export default FlashCards;
