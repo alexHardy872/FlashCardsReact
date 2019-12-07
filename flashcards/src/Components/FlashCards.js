@@ -27,11 +27,11 @@ class FlashCards extends React.Component {
     getData(){
         axios.get('http://localhost:3000/Collections')
         .then((response) =>  {
-            //console.log(response.data);
-            this.setState({collection: response.data});
-            
+            this.setState({collection: response.data});    
         })
     }
+
+  
 
     render() {
         return (
@@ -50,9 +50,10 @@ class FlashCards extends React.Component {
                 <Current />
               </div>
               <div className="col-md-4">
-                <Collections />
+                <Collections allCards={this.state.collection} />
               </div>
             </div>
+           
             </div>
         )
     }

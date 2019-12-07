@@ -38,7 +38,7 @@
 }
 
 .bor{
-  border: 2pt solid white;
+  border: 1pt solid white;
  
 }
 
@@ -49,9 +49,21 @@ body{
 
 .current{
   height: 400px;
+  
 }
 
 .card{
+  display: inline-block;
   height: 250px;
   width: 175px;
+  border-radius: 5px;
+  background-color: maroon;
+}
+
+.active{
+  background-color: yellow;
+}
+
+.stack:hover{
+  background-color: rgba(255, 255, 0, 0.233);
 }

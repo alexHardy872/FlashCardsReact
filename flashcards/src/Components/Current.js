@@ -10,15 +10,20 @@ class Current extends React.Component {
         }
     }
 
-    getData(){
-
+    renderCard(i){
+        return <Card />;
     }
+
 
     render() {
         return (
             <div className="bor current">
                 <p>Current Component</p>
                 <Card />
+                <div>
+                <button className="default-btn">Another Card</button>
+                </div>
+               
             </div>
         )
     }

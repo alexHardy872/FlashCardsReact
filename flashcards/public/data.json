@@ -19,6 +19,11 @@
             "id": 3,
             "word": "component",
             "definition": "Reusable building blocks for UI using JSX"
+          },
+          {
+            "id": 4,
+            "word": "JSX",
+            "definition": "A javascript/xml script that is compile from html"
           }
         ]
       },
@@ -41,6 +46,28 @@
             "id": 3,
             "word": "object",
             "definition": "Instance of a class"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Bonus",
+        "cards":
+        [
+          {
+            "id": 1,
+            "word": "MVC",
+            "definition": "Model View Contoller"
+          },
+          {
+            "id": 2,
+            "word": "ORM",
+            "definition": "Object Relational Mapping"
+          },
+          {
+            "id": 3,
+            "word": "ERD",
+            "definition": "Entity Relationship Diagram"
           }
         ]
       }
