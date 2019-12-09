@@ -10,8 +10,8 @@ class FlashCards extends React.Component {
         super(props);
         this.state = {
            collection: [],
-           currentStack: [],
-           currentCard: 0
+           currentStack: {},
+           currentCard: {}
         }
         //this.getData = this.getData.bind(this);
         console.log(this.state.collection);
@@ -20,7 +20,7 @@ class FlashCards extends React.Component {
     componentDidMount(){
         
         this.getData();
-        console.log("collection return", this.state.collection );
+        
         
     }
 
@@ -32,6 +32,12 @@ class FlashCards extends React.Component {
     }
 
   
+    setCurrentStack(curStack){
+        console.log("set current stack in flashcards from collections");   
+        this.setState({currentStack: curStack})
+      
+    }
+
 
     render() {
         return (
@@ -50,7 +56,7 @@ class FlashCards extends React.Component {
                 <Current />
               </div>
               <div className="col-md-4">
-                <Collections allCards={this.state.collection} />
+                <Collections allCards={this.state.collection} setCurrentStack={this.setCurrentStack.bind(this)} />
               </div>
             </div>
            

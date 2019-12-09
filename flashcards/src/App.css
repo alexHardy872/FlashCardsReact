@@ -61,7 +61,7 @@ body{
 }
 
 .active{
-  background-color: yellow;
+  color: yellow;
 }
 
 .stack:hover{
