@@ -6,15 +6,13 @@ class Card extends React.Component {
 
     constructor(props){
         super(props);
-        this.state = {
-           
-        }
+
     }
 
     render() {
         return (
             <div className="bor card">
-                <p>Card</p>
+                <p>Card {this.props.result}</p>
                
             </div>
         )

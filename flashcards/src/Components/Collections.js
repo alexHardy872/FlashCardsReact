@@ -16,21 +16,17 @@ class Collections extends React.Component {
    
 
     setCurrentStack(curStack){
-        console.log("set current stack in collections from stack");
-        
+        console.log("set current stack in collections from stack", curStack);   
         this.setState({currentStack: curStack})
-        this.props.setCurrentStack(curStack);
-      
+        this.props.setCurrentStack(curStack);    
     }
 
-    componentDidMount(){
 
-    }
 
 
     render() {
         return (
-            <div className="bor">
+            <div className="bor collections">
                 <p>Collections</p>
                 {this.props.allCards.map((id) => {
                 return <Stack currentStack={this.state.currentStack} setCurrentStack={this.setCurrentStack.bind(this)}  key={id.id} stack={id} />

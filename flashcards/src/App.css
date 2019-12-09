@@ -67,3 +67,8 @@ body{
 .stack:hover{
   background-color: rgba(255, 255, 0, 0.233);
 }
+
+.collections{
+  border-color: gray;
+  padding: 10px;
+}
