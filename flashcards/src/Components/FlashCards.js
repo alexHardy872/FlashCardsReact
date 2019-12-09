@@ -12,7 +12,8 @@ class FlashCards extends React.Component {
            collection: [],
            currentStack: {},
            currentCard: {},
-           currentCardNum: 1
+           currentCardNum: 1,
+           cardPos: "front"
         }
     }
 
@@ -64,16 +65,68 @@ class FlashCards extends React.Component {
     }
 
     nextCard(){
-        let newCard = this.state.currentStack.cards.filter(card => card.id === this.state.currentCardNum + 1)[0];
-        this.setState({currentCardNum: this.state.currentCardNum + 1,
-                        currentCard: newCard })
+
+        let length = this.state.currentStack.cards.length;
+        let pos = this.state.currentCardNum;
+        let card = this.state.currentCard;
+        if (this.state.currentCardNum === length){
+            card = this.state.currentStack.cards.filter(card => card.id === 1)[0];
+            pos = 1;
+        }
+        else{
+            card = this.state.currentStack.cards.filter(card => card.id === this.state.currentCardNum + 1)[0];
+            pos = pos + 1;
+        }   
+        this.setState({currentCardNum: pos,
+            currentCard: card })
     }
 
     prevCard(){
-        let newCard = this.state.currentStack.cards.filter(card => card.id === this.state.currentCardNum - 1)[0];
-        this.setState({currentCardNum: this.state.currentCardNum - 1,
-                        currentCard: newCard })
+        let length = this.state.currentStack.cards.length;
+        let pos = this.state.currentCardNum;
+        let card = this.state.currentCard;
+        if (this.state.currentCardNum === 1){
+            card = this.state.currentStack.cards.filter(card => card.id === length)[0];
+            pos = length;
+        }
+        else{
+            card = this.state.currentStack.cards.filter(card => card.id === this.state.currentCardNum - 1)[0];
+            pos = pos - 1;
+        }   
+        this.setState({currentCardNum: pos,
+            currentCard: card })
     }
+
+    getLength(){
+
+        try{           
+             return this.state.currentStack.cards.length;
+        }
+        catch{
+            return 0;
+        }
+
+        
+        
+    }
+
+    flipCard(){
+        if (this.state.cardPos === "front"){
+            this.setState({cardPos: "back"});
+        }else{
+            this.setState({cardPos: "front"});
+        }
+    }
+
+    // displayCard(){
+    //     if (this.state.cardPos === "front"){
+    //         return <p>{this.state.currentCard.word}</p>
+    //     }else{
+    //         return <p>{this.state.currentCard.definition}</p>
+    //     }
+    // }
+
+   
 
 
     render() {
@@ -81,6 +134,7 @@ class FlashCards extends React.Component {
       
         //console.log("current stack cards 0", this.state.currentStack.cards[0]);
         return (
+            
             <div className="container bor">
             <div className="row">
               <div className="col-lg-12">
@@ -95,10 +149,17 @@ class FlashCards extends React.Component {
               <div className="col-md-8 bor collections">
                 {/* <Current currentStack={this.state.currentStack} currentCardNum={this.state.currentCardNum}/> */}
                 
-                <h4>{this.currentStackTitle()} ({this.state.currentCard.id}/)</h4>
-                 <div className="bor card">
-                     <p> word = "{this.state.currentCard.word}"</p>
-                     <p> definition = "{this.state.currentCard.definition}"</p>
+                <h4>{this.currentStackTitle()} ({this.state.currentCard.id}/{this.getLength()})</h4>
+                 <div className="bor card" onClick={this.flipCard.bind(this)}>
+                     {this.state.cardPos === "front" &&
+                        
+                        <p>{this.state.currentCard.word}</p>
+    
+                     }
+                       {this.state.cardPos === "back" &&
+                        <p>{this.state.currentCard.definition}</p>    
+                     }
+                    
                  </div>
              
                  <div>
