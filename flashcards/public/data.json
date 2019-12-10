@@ -49,57 +49,28 @@
     },
     {
       "id": 3,
-      "title": "Bonus2",
+      "title": "Bonus3",
       "cards": [
         {
           "id": 1,
-          "word": "variable",
-          "definition": "Named space in memory"
-        },
-        {
-          "id": 2,
-          "word": "class",
-          "definition": "Template for an object that consists of member variables, constructor, methods"
-        },
-        {
-          "id": 3,
-          "word": "object",
-          "definition": "Instance of a class"
-        },
-        {
-          "id": 4,
-          "word": "test word 2!",
-          "definition": "test definition!"
-        },
-        {
-          "id": 5,
-          "word": "test word 2!",
-          "definition": "test definition!"
-        },
-        {
-          "id": 6,
-          "word": "test word 2!",
-          "definition": "test definition!"
-        },
-        {
-          "id": 7,
-          "word": "test word 2!",
-          "definition": "test definition!"
-        },
-        {
-          "id": 8,
-          "word": "test word 2!",
-          "definition": "test definition!"
-        },
-        {
-          "id": 9,
           "word": "as",
-          "definition": "sasss"
-        },
+          "definition": "assss"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "asdasd",
+      "cards": []
+    },
+    {
+      "id": 5,
+      "title": "ANGULAR",
+      "cards": [
         {
-          "id": 10,
-          "word": "map",
-          "definition": "essentially a for each which allows you to render lists of elements based on data in JSX"
+          "id": 1,
+          "word": "angular",
+          "definition": "I know nothing about angular!"
         }
       ]
     }
