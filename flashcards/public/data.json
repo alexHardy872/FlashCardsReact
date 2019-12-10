@@ -1,76 +1,97 @@
 {
-    "collections": [
-      {
-        "id": 1,
-        "title": "React",
-        "cards":
-        [
-          {
-            "id": 1,
-            "word": "state",
-            "definition": "JS object that holds values for a component"
-          },
-          {
-            "id": 2,
-            "word": "props",
-            "definition": "A way to pass data into components on initialization"
-          },
-          {
-            "id": 3,
-            "word": "component",
-            "definition": "Reusable building blocks for UI using JSX"
-          },
-          {
-            "id": 4,
-            "word": "JSX",
-            "definition": "A javascript/xml script that is compile from html"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "C#",
-        "cards":
-        [
-          {
-            "id": 1,
-            "word": "variable",
-            "definition": "Named space in memory"
-          },
-          {
-            "id": 2,
-            "word": "class",
-            "definition": "Template for an object that consists of member variables, constructor, methods"
-          },
-          {
-            "id": 3,
-            "word": "object",
-            "definition": "Instance of a class"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Bonus",
-        "cards":
-        [
-          {
-            "id": 1,
-            "word": "MVC",
-            "definition": "Model View Contoller"
-          },
-          {
-            "id": 2,
-            "word": "ORM",
-            "definition": "Object Relational Mapping"
-          },
-          {
-            "id": 3,
-            "word": "ERD",
-            "definition": "Entity Relationship Diagram"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "collections": [
+    {
+      "id": 1,
+      "title": "React",
+      "cards": [
+        {
+          "id": 1,
+          "word": "state",
+          "definition": "JS object that holds values for a component"
+        },
+        {
+          "id": 2,
+          "word": "props",
+          "definition": "A way to pass data into components on initialization"
+        },
+        {
+          "id": 3,
+          "word": "component",
+          "definition": "Reusable building blocks for UI using JSX"
+        },
+        {
+          "id": 4,
+          "word": "JSX",
+          "definition": "A javascript/xml script that is compile from html"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "C#",
+      "cards": [
+        {
+          "id": 1,
+          "word": "variable",
+          "definition": "Named space in memory"
+        },
+        {
+          "id": 2,
+          "word": "class",
+          "definition": "Template for an object that consists of member variables, constructor, methods"
+        },
+        {
+          "id": 3,
+          "word": "object",
+          "definition": "Instance of a class"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bonus2",
+      "cards": [
+        {
+          "id": 1,
+          "word": "variable",
+          "definition": "Named space in memory"
+        },
+        {
+          "id": 2,
+          "word": "class",
+          "definition": "Template for an object that consists of member variables, constructor, methods"
+        },
+        {
+          "id": 3,
+          "word": "object",
+          "definition": "Instance of a class"
+        },
+        {
+          "id": 4,
+          "word": "test word 2!",
+          "definition": "test definition!"
+        },
+        {
+          "id": 5,
+          "word": "test word 2!",
+          "definition": "test definition!"
+        },
+        {
+          "id": 6,
+          "word": "test word 2!",
+          "definition": "test definition!"
+        },
+        {
+          "id": 7,
+          "word": "test word 2!",
+          "definition": "test definition!"
+        },
+        {
+          "id": 8,
+          "word": "test word 2!",
+          "definition": "test definition!"
+        }
+      ]
+    }
+  ]
+}

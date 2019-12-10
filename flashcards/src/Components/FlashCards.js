@@ -22,28 +22,48 @@ class FlashCards extends React.Component {
     }
 
     getData(){
-        axios.get('http://localhost:3000/Collections')
+        axios.get('http://localhost:3000/collections')
         .then((response) =>  {
             this.setState({collection: response.data});    
         })
     }
 
-    postData(){
-        axios.post('http://localhost:300/Collections', {
-            firstName: 'Fred',
-            lastName: 'Flintstone'
+    postData(newCard){
+        let cards = this.state.currentStack.cards;
+        let updatedCards = cards.push(newCard);
+        console.log(cards);
+        
+        axios.put('http://localhost:3000/collections/'+this.state.currentStack.id, {
+            "id": this.state.currentStack.id,
+            "title": this.state.currentStack.title,
+            "cards": cards,
+
+
+          
           })
           .then(function (response) {
-            console.log(response);
+            console.log("response?"+ response);
+            console.log("responsedata? "+response.data);
           })
           .catch(function (error) {
             console.log(error);
           });
     }
 
+    createCard(){
+        let newId = this.state.currentStack.cards.length +1;
+        let newCard = {
+            "id" : newId,
+            "word" : "test word 2!",
+            "definition" : "test definition!"
+        }
+        console.log(newCard);
+        this.postData(newCard).bind(this);
+    }
+
   
     setCurrentStack(curStack){
-        console.log("set current stack in flashcards from collections (FLASHCARD)", curStack);   
+        //console.log("set current stack in flashcards from collections (FLASHCARD)", curStack);   
         let card = curStack.cards.filter(card => card.id === this.state.currentCardNum);
         this.setState({
             currentStack: curStack,
@@ -51,12 +71,12 @@ class FlashCards extends React.Component {
         })
         //this.setState({currentCard: this.setCurrentCard(this.state.currentCardNum)})
         //this.setCurrentCard(this.state.currentCardNum - 1);
-        console.log("current stack cards", curStack.cards.filter(card => card.id === 1));
+        //console.log("current stack cards", curStack.cards.filter(card => card.id === 1));
       
     }
 
     setCurrentCard(cardNum){
-        console.log("Card " + this.state.currentStack.cards);
+        //console.log("Card " + this.state.currentStack.cards);
         return this.state.currentStack.cards[cardNum];
     }
 
@@ -118,15 +138,7 @@ class FlashCards extends React.Component {
         }
     }
 
-    // displayCard(){
-    //     if (this.state.cardPos === "front"){
-    //         return <p>{this.state.currentCard.word}</p>
-    //     }else{
-    //         return <p>{this.state.currentCard.definition}</p>
-    //     }
-    // }
 
-   
 
 
     render() {
@@ -166,6 +178,7 @@ class FlashCards extends React.Component {
                     <button onClick={this.prevCard.bind(this)}>PREV</button>
                     <button onClick={this.nextCard.bind(this)}>NEXT</button>
                  </div>
+                 <button onClick={this.createCard.bind(this)}>CreateCard</button>
                
               </div>
               <div className="col-md-4">
