@@ -90,6 +90,16 @@
           "id": 8,
           "word": "test word 2!",
           "definition": "test definition!"
+        },
+        {
+          "id": 9,
+          "word": "as",
+          "definition": "sasss"
+        },
+        {
+          "id": 10,
+          "word": "map",
+          "definition": "essentially a for each which allows you to render lists of elements based on data in JSX"
         }
       ]
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Current from './Current.js';
 import Collections from './Collections.js';
+import NewCard from './NewCard.js';
 
 
 class FlashCards extends React.Component {
@@ -29,13 +30,15 @@ class FlashCards extends React.Component {
     }
 
     postData(newCard){
-        let cards = this.state.currentStack.cards;
-        let updatedCards = cards.push(newCard);
+        debugger;
+        let stack = this.currentStack;
+        let cards = this.currentStack.cards;
+        cards.push(newCard);
         console.log(cards);
         
-        axios.put('http://localhost:3000/collections/'+this.state.currentStack.id, {
-            "id": this.state.currentStack.id,
-            "title": this.state.currentStack.title,
+        axios.put('http://localhost:3000/collections/'+stack.id, {
+            "id": stack.id,
+            "title": stack.title,
             "cards": cards,
 
 
@@ -50,15 +53,16 @@ class FlashCards extends React.Component {
           });
     }
 
-    createCard(){
-        let newId = this.state.currentStack.cards.length +1;
+    createCard(word, definition){
+       
+        let newId = this.currentStack.cards.length +1;
         let newCard = {
             "id" : newId,
-            "word" : "test word 2!",
-            "definition" : "test definition!"
+            "word" : word,
+            "definition" : definition
         }
         console.log(newCard);
-        this.postData(newCard).bind(this);
+        this.postData(newCard);
     }
 
   
@@ -178,8 +182,8 @@ class FlashCards extends React.Component {
                     <button onClick={this.prevCard.bind(this)}>PREV</button>
                     <button onClick={this.nextCard.bind(this)}>NEXT</button>
                  </div>
-                 <button onClick={this.createCard.bind(this)}>CreateCard</button>
-               
+                
+               <NewCard createCard={this.createCard} currentStack={this.state.currentStack} postData={this.postData}/>
               </div>
               <div className="col-md-4">
                 <Collections allCards={this.state.collection} setCurrentStack={this.setCurrentStack.bind(this)} />
