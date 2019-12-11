@@ -17,6 +17,7 @@ class FlashCards extends React.Component {
            currentCardNum: 1,
            cardPos: "front"
         }
+        //this.whateverthenameofyourfunc = this.samename.bind(this);
     }
 
     componentDidMount(){      
@@ -24,6 +25,14 @@ class FlashCards extends React.Component {
     }
 
     getData(){
+        axios.get('http://localhost:3000/collections')
+        .then((response) =>  {
+            this.setState({collection: response.data});    
+        })
+    }
+
+    updateData(){
+        
         axios.get('http://localhost:3000/collections')
         .then((response) =>  {
             this.setState({collection: response.data});    
@@ -42,9 +51,9 @@ class FlashCards extends React.Component {
             "title": stack.title,
             "cards": cards,
           })
-          .then(function (response) {
-            console.log("response?"+ response);
-            console.log("responsedata? "+response.data);
+          .then((response) => {
+             
+            this.updateData();
           })
           .catch(function (error) {
             console.log(error);
@@ -52,7 +61,7 @@ class FlashCards extends React.Component {
     }
 
     postCollection(newCollection){
-        debugger;
+        
         let collect = this.Collections;
         
         collect.push(newCollection);
@@ -63,9 +72,9 @@ class FlashCards extends React.Component {
             "title": newCollection.title,
             "cards": newCollection.cards,
           })
-          .then(function (response) {
-            console.log("response?"+ response);
-            console.log("responsedata? "+response.data);
+          .then((response) => {
+             
+            this.updateData();
           })
           .catch(function (error) {
             console.log(error);
@@ -73,7 +82,7 @@ class FlashCards extends React.Component {
     }
 
     createCard(word, definition){
-       
+      
         let newId = this.currentStack.cards.length +1;
         let newCard = {
             "id" : newId,
@@ -85,7 +94,7 @@ class FlashCards extends React.Component {
     }
 
     createCollection(title){
-       debugger;
+       
         let newId = this.Collections.length +1;
         let newCollection = {
             "id" : newId,
@@ -98,6 +107,7 @@ class FlashCards extends React.Component {
 
   
     setCurrentStack(curStack){
+      
         if(curStack.cards.length == 0){
             this.setState({
                 currentStack: curStack,
@@ -105,14 +115,16 @@ class FlashCards extends React.Component {
                     "id": 1,
                     "word": "no card in this collection!",
                     "definition": "too add a card fill out the form below!"
-                }
+                },
+                currentCardNum: 1
             })
         }
         else{
-            let card = curStack.cards.filter(card => card.id === this.state.currentCardNum);
+            let card = curStack.cards.filter(card => card.id === 1);
             this.setState({
                 currentStack: curStack,
-                currentCard: card[0]
+                currentCard: card[0],
+                currentCardNum: 1
             }) 
         }
      
@@ -224,8 +236,8 @@ class FlashCards extends React.Component {
                     <button onClick={this.nextCard.bind(this)}>NEXT</button>
                  </div>
                 
-               <NewCard createCard={this.createCard} currentStack={this.state.currentStack} postData={this.postData}/>
-               <NewCollection createCollection={this.createCollection} Collections={this.state.collection} postCollection={this.postCollection}/>
+               <NewCard  createCard={this.createCard} currentStack={this.state.currentStack} postData={this.postData} updateData={this.updateData.bind(this)}/>
+               <NewCollection  createCollection={this.createCollection} Collections={this.state.collection} postCollection={this.postCollection}  updateData={this.updateData.bind(this)}/>
               </div>
               <div className="col-md-4">
                 <Collections allCards={this.state.collection} setCurrentStack={this.setCurrentStack.bind(this)} />

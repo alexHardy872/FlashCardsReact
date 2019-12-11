@@ -4,7 +4,7 @@ import React from 'react';
 function NewCard(props) {
 
     const assembleCardFromForm = (event) => {
-        
+        event.preventDefault();
         const word = event.target[0].value;
         const definition = event.target[1].value;
         props.createCard(word, definition);

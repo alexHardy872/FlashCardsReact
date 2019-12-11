@@ -4,7 +4,7 @@ import React from 'react';
 function NewCollection(props) {
 
     const assembleCollectionFromForm = (event) => {
-        
+        event.preventDefault();
         const title = event.target[0].value;
         props.createCollection(title);
     }

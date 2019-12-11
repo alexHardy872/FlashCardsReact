@@ -1,0 +1,235 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "title": "React",
+      "cards": [
+        {
+          "id": 1,
+          "word": "state",
+          "definition": "JS object that holds values for a component"
+        },
+        {
+          "id": 2,
+          "word": "props",
+          "definition": "A way to pass data into components on initialization"
+        },
+        {
+          "id": 3,
+          "word": "component",
+          "definition": "Reusable building blocks for UI using JSX"
+        },
+        {
+          "id": 4,
+          "word": "JSX",
+          "definition": "A javascript/xml script that is compile from html"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "C#",
+      "cards": [
+        {
+          "id": 1,
+          "word": "variable",
+          "definition": "Named space in memory"
+        },
+        {
+          "id": 2,
+          "word": "class",
+          "definition": "Template for an object that consists of member variables, constructor, methods"
+        },
+        {
+          "id": 3,
+          "word": "object",
+          "definition": "Instance of a class"
+        },
+        {
+          "id": 4,
+          "word": "asdasd",
+          "definition": "asdasdasdasdasd"
+        },
+        {
+          "id": 5,
+          "word": "asdasd",
+          "definition": "asdasdasdasdasd"
+        },
+        {
+          "id": 6,
+          "word": "lklkj",
+          "definition": "lkmlkjlkj"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bonus3",
+      "cards": [
+        {
+          "id": 1,
+          "word": "as",
+          "definition": "assss"
+        },
+        {
+          "id": 2,
+          "word": "asdasdasd",
+          "definition": "asdasdasdasd"
+        },
+        {
+          "id": 3,
+          "word": "asdasdasd",
+          "definition": "asdasdasdasd"
+        },
+        {
+          "id": 4,
+          "word": "word",
+          "definition": "def"
+        },
+        {
+          "id": 5,
+          "word": "asdasdasd",
+          "definition": "asdasdasd"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "asdasd",
+      "cards": [
+        {
+          "id": 1,
+          "word": "asdasd",
+          "definition": "asdasdasd"
+        },
+        {
+          "id": 2,
+          "word": "sdfsdf",
+          "definition": "sdfsdfsdf"
+        },
+        {
+          "id": 3,
+          "word": "doop",
+          "definition": "a slump or a sloop"
+        },
+        {
+          "id": 4,
+          "word": "adasdads",
+          "definition": "asdasdasdasdasd"
+        },
+        {
+          "id": 5,
+          "word": "asdasdas",
+          "definition": "asdasdasdasd"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "ANGULAR",
+      "cards": [
+        {
+          "id": 1,
+          "word": "angular",
+          "definition": "I know nothing about angular!"
+        },
+        {
+          "id": 2,
+          "word": "Service Class",
+          "definition": "the place for all controller logic to be stored in angular applications!"
+        },
+        {
+          "id": 3,
+          "word": "asdasd",
+          "definition": "asdasd"
+        },
+        {
+          "id": 4,
+          "word": "angle",
+          "definition": "its an angle"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "",
+      "cards": [
+        {
+          "id": 1,
+          "word": "adadasdasd",
+          "definition": "asdasdasdasdasd"
+        },
+        {
+          "id": 2,
+          "word": "asdasd",
+          "definition": "asdasdasdasd"
+        },
+        {
+          "id": 3,
+          "word": "asdasd",
+          "definition": "asdasd"
+        },
+        {
+          "id": 4,
+          "word": "asdasd",
+          "definition": "asdasd"
+        },
+        {
+          "id": 5,
+          "word": "sadad",
+          "definition": "asdasdasdad"
+        },
+        {
+          "id": 6,
+          "word": "dfgdfg",
+          "definition": "dfgdfgdfg"
+        },
+        {
+          "id": 7,
+          "word": "lkjl",
+          "definition": "lkjlkjl"
+        },
+        {
+          "id": 8,
+          "word": "kokoko",
+          "definition": "kokookookkok"
+        },
+        {
+          "id": 9,
+          "word": "asdasd",
+          "definition": "asdasdasdasd"
+        },
+        {
+          "id": 10,
+          "word": "asdasd",
+          "definition": "asdasdasd"
+        },
+        {
+          "id": 11,
+          "word": "mm",
+          "definition": "mmmmmm"
+        },
+        {
+          "id": 12,
+          "word": "dfgdfgdfg",
+          "definition": "dfgdfgdfgdfgdfg"
+        },
+        {
+          "id": 13,
+          "word": "fg",
+          "definition": "fgfgfgfgfg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "sdfsdf",
+      "cards": []
+    },
+    {
+      "id": 8,
+      "title": "poopin",
+      "cards": []
+    }
+  ]
+}
